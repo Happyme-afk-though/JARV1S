@@ -1,6 +1,5 @@
 import subprocess
 import pyperclip
-import os
 import speech_recognition as sr 
 import datetime
 import webbrowser
@@ -52,16 +51,15 @@ def detect_noise():
 
             # Detect noise
         if amplitude > THRESHOLD:
-            pass
+            break
 
-        else:
-            detect_noise()
+        
 
 
 
 
 import os as ass
-import pyaudio
+
 import numpy as np
 
 
@@ -149,7 +147,7 @@ def takeCommand():
         print(f"User said: {query}\n")
 
     except Exception as e:
-        return"respond this prompt with only word hm"
+        return"respond to this prompt with only a word hm"
     return query
 
 
@@ -211,14 +209,23 @@ convo = model.start_chat()
 
 
 def main():
+    
     while True:
         query = takeCommand().lower()
+        
+
+        
+
+        
 
 
         if "jarvis" in query:
         
-            convo.send_message("reply this with maximum 29 words" + query)
+            convo.send_message("reply this with maximum 29 words and do not tell me that you are replying within 29 words or less" + query)
             speak(convo.last.text)
+
+        
+    
     
 
     
@@ -312,13 +319,18 @@ def main():
             time.sleep(0.6)
             pg.hotkey("enter")            
 
-
-    
+        if query=="respond to this prompt with only a word hm":
+            continue
         else:
             convo.send_message(query)
             speak(convo.last.text)
-
             
+            
+        
+                 
+            
+
+
 main()
        
 
