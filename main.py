@@ -72,7 +72,7 @@ chrome_options.add_argument("--headless")  # Run in headless mode (without openi
 
 # Specify the path to your Chrome driver executable
 
-chrome_driver_path = r'C:\\Users\\u\\Desktop\\eve\\python\\chromedriver.exe'
+chrome_driver_path = r'chromedriver.exe'
 
 # Create a Service object with the specified executable path
 chrome_service = Service(chrome_driver_path)
@@ -209,7 +209,7 @@ convo = model.start_chat()
 
 
 def main():
-    
+    detect_noise()
     while True:
         query = takeCommand().lower()
         
