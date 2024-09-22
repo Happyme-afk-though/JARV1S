@@ -17,6 +17,9 @@ from selenium.webdriver.support import expected_conditions as EC
 import psutil
 import pyttsx3
 import pyaudio
+import os 
+import numpy as np
+
 
 
 # Parameters
@@ -58,9 +61,7 @@ def detect_noise():
 
 
 
-import os as ass
 
-import numpy as np
 
 
 
