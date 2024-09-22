@@ -1,11 +1,7 @@
-import subprocess
-import pyperclip
 import speech_recognition as sr 
-import datetime
 import webbrowser
 import pyautogui as pg
 import time
-import wikipedia
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import requests
@@ -14,12 +10,9 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support import expected_conditions as EC
-import psutil
-import pyttsx3
 import pyaudio
-import os 
+import os as ass
 import numpy as np
-
 
 
 # Parameters
@@ -67,13 +60,13 @@ def detect_noise():
 
 
 
-from selenium.webdriver.support import expected_conditions as EC
+
 chrome_options = Options()
 chrome_options.add_argument("--headless")  # Run in headless mode (without opening a browser window)
 
 # Specify the path to your Chrome driver executable
 
-chrome_driver_path = r'chromedriver.exe'
+chrome_driver_path = r'C:\\Users\\u\\Desktop\\eve\\python\\chromedriver.exe'
 
 # Create a Service object with the specified executable path
 chrome_service = Service(chrome_driver_path)
