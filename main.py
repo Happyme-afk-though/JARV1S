@@ -152,7 +152,7 @@ import  google.generativeai as genai
 
 
 
-GOOGLE_API_KEY ="your gemini ai key"
+GOOGLE_API_KEY ="your gemini api key"
 genai.configure(api_key=GOOGLE_API_KEY)
 generate_config = {
     "temperature": 1,
